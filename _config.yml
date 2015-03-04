@@ -1,19 +1,23 @@
 # Site settings
 
-title: Powerful New Theme for GitHub Pages | OpenTheme.co
-tagline: Amazing Websites and Hybrid Apps. Speedily!
-email: sehgal.manav@gmail.com
-copyright: Manav Sehgal
+title: The Robobench Reproducible Robotics Framework | robobench.net
+tagline: Robobench - Build, Share, and Benchmark
+email: jon.weisz@gmail.com
+copyright: Jonathan Weisz
 keywords: open theme, github pages, semantic ui, single page apps
 
-description: > # this means to ignore newlines until "url:". One indent required.
-  Powerful new theme featuring Semantic UI for speedily creating amazing websites and mobile-hybrid apps on GitHub Pages.
+description: > # this means to ignore newlines until "url:". One indent required
+    Containerized Robotics.
+    Managed Configurations. 
+    Distribute Demos. 
+    Integrated CI Deployment.
+
 
 # the base hostname & protocol for your site
-url: "http://opentheme.co"
+url: "http://robobench.net"
 
-twitter_username: manavsehgal
-github_username:  manavsehgal
+#twitter_username: manavsehgal
+#github_username:  manavsehgal
 
 default_image: /img/opentheme-workflow.png
 
@@ -60,19 +64,19 @@ google_map_height: 450            # Default map height. Width adjusts to contain
 
 # API Keys. PLEASE DO NOT USE THESE KEYS. Get your own at links in comments.
 
-google_api_key: "AIzaSyDmt_iRsE8kQ1glUPC2GZpNLBsw1Laj9_0" # https://code.google.com/apis/console/
-google_analytics_ua: "UA-57703915-1" # Google Analytics site specific id
-google_cse_id: "012558675018178618302:kw1_r8qgyqc" # Google Custom Search Engine unique id
+#google_api_key: "AIzaSyDmt_iRsE8kQ1glUPC2GZpNLBsw1Laj9_0" # https://code.google.com/apis/console/
+#google_analytics_ua: "UA-57703915-1" # Google Analytics site specific id
+#google_cse_id: "012558675018178618302:kw1_r8qgyqc" # Google Custom Search Engine unique id
+#
+#mapbox: "pk.eyJ1Ijoib3BlbnRoZW1lIiwiYSI6ImNIWC1LTUUifQ.vq4k3nfTeTtDAk7eLCrVAw"
 
-mapbox: "pk.eyJ1Ijoib3BlbnRoZW1lIiwiYSI6ImNIWC1LTUUifQ.vq4k3nfTeTtDAk7eLCrVAw"
+#facebook_app: "390272554479803" # https://developers.facebook.com/
 
-facebook_app: "390272554479803" # https://developers.facebook.com/
+#mailchimp_u: "cf72d9276397b3175b874eb39" # Mailchimp u=unique identification
+#mailchimp_id: "3a51637dcc" # Mailchip id
 
-mailchimp_u: "cf72d9276397b3175b874eb39" # Mailchimp u=unique identification
-mailchimp_id: "3a51637dcc" # Mailchip id
+#addthis_pubid: "ra-54a66cfa35915034" # Get your pubid at https://www.addthis.com/dashboard
 
-addthis_pubid: "ra-54a66cfa35915034" # Get your pubid at https://www.addthis.com/dashboard
+#pingdom_rum: "54a97d8aabe53daf361855a6" # https://my.pingdom.com/dashboard. Real User experience (speed) monitoring.
 
-pingdom_rum: "54a97d8aabe53daf361855a6" # https://my.pingdom.com/dashboard. Real User experience (speed) monitoring.
-
-uservoice: "nvdgD40UtxnMoshpVHYxg"
+#uservoice: "nvdgD40UtxnMoshpVHYxg"
