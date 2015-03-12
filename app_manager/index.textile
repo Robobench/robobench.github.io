@@ -22,3 +22,97 @@ The purpose of the rapman manager is distributing completely encapsulated softwa
 Individual _capabilities_ could be exposed through the same technique, but that would require coordination between multiple encapsulated entities, which we do not directly support as of now. 
 
 
+h2. Quick Start
+
+h3. Dependencies
+The main dependency is the Docker container framework. Instructions can be found at https://docs.docker.com/.
+
+h3. Download Application Manager
+To download the _rapman_ application manager, clone the ("_rapman-subuser_ repository"):https://github.com/Robobench/rapman-subuser . Then add the path of the directory to your path - for example:
+
+bc. In ~/.bashrc
+...
+export PATH=$PATH:/path/to/subuser_base/logic
+
+h3. Look at available images
+
+bc.$ subuser list available
+
+Images available for instalation from the repo: default
+hrpsys_walking_mission:
+ Description: hrpsys simulator framework with simple robot taking a few steps. 
+ Maintainer: Jonathan Weisz <jon.weisz (at) gmail dot com>
+ Last update time(version): None
+ Executable: /home/tester/Dev/run_test_walking.bash
+ Moderate permissions(These are probably safe):
+  Can access the network/internet.
+ Liberal permissions(These may pose a security risk):
+  Can display X11 windows and interact with your X11 server directly(log keypresses, read over your shoulder ect.)
+ Can access your graphics-card directly for OpenGL tasks.
+reem_nav_mission:
+ Description: REEM robot navigating between two rooms in a Gazebo simulation.
+ Maintainer: Jonathan Weisz <jon.weisz (at) gmail dot com>
+ Last update time(version): None
+ Executable: /home/tester/Dev/reem_sim_ws/reem_sim_ws_scripts/reem_navigation_launch.bash
+ Moderate permissions(These are probably safe):
+  Can access the network/internet.
+ Liberal permissions(These may pose a security risk):
+  Can display X11 windows and interact with your X11 server directly(log keypresses, read over your shoulder ect.)
+ Can access your graphics-card directly for OpenGL tasks.
+
+
+As you can see, this shows the available apps in the current repository, along with the metadata about the 
+
+
+h3. Installing an App
+
+bc. rapman add <installed-app-name> <repository-app-name>@<repository>
+
+i.e.
+
+bc. rapman add hrpsys_walking_mission hrpsys_walking_mission@default
+
+This will download and install the base application, but it is not in a final, runnable configuration until the first time it is run. 
+
+
+h3. Running an App
+
+Running an app will launch a full simulation of a robot doing something. These simulations may take several seconds to start up. 
+
+
+bc. rapman run <installed-app-name> 
+
+i.e.
+
+bc. rapman run hrpsys_walking_mission hrpsys_walking_mission@default
+
+This will load the hrpsys_walking_mission's image, and the run the command shown in the executable field of the app description, which in this case is /home/tester/Dev/run_test_walking.bash . This is a script that launches the simulation. 
+
+To take a close look, do:
+
+bc. rapman run hrpsys_walking_mission hrpsys_walking_mission@default --enter
+
+This will drop you into a root prompt inside of the image.
+
+
+h3. Removing an App
+When you are finished with an app, clean it up by doing this:
+
+bc. rapman remove <installed-app-name> 
+
+
+h2. What is the rapman?
+
+At it's core, _rapman_ is a tool for distributing ("_containerized_"):http://en.wikipedia.org/wiki/LXC applications. It is heavily based on another tool for containerizing userspace applications named _subuser_. 
+
+h2. Why Have Another App Manager?
+
+Containerization is going to play a major role in reproducible software in every domain, but the robotics domain has some requirements that are antithetical to the goals of the broader _containerization_ community. To get applications that are GPU intensive or use GPU computation to work correctly, we have to install specific drivers for the host machine. In the broader community, this is considered terrible practice. In myriad other ways, the tools that are popular in the _containerization_ community right now are not well suited to our needs. 
+
+The rapman app manager allows us to have a turn-key solution for running and distributing complex demos. Additionally, rapman apps very well suited to creating sets of applications in an easily distributed, public, and version controlled way. An application set is a git repository, preferably on github, where each app is specified by a directory containing a build script for the image and a metadata file describing the configuration of the image. 
+
+
+
+
+
+<!--Installing and running robotics frameworks generally requires running installation or configuration scripts with elevated priviliges. This is not something we usually think about, but it shouldn't be hidden. -->
