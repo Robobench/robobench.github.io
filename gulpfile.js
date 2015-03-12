@@ -43,7 +43,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 gulp.task('browser-sync', ['sass', 'jekyll-build', 'coffee'], function() {
     browserSync({
         host: '0.0.0.0',    // For Cloud9 IDE Previews. Remove for localhost
-        port: '8080',       // For Cloud9 IDE Previews. Remove for browserSync default
+        port: '4000',       // For Cloud9 IDE Previews. Remove for browserSync default
         server: {
             baseDir: '_site'
         }

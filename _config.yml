@@ -9,13 +9,12 @@ keywords: open theme, github pages, semantic ui, single page apps
 description: > # this means to ignore newlines until "url:". One indent required
     Containerized Robotics.
     Managed Configurations. 
-    Distribute Demos. 
+    Distribute Demos Through 
     Integrated CI Deployment.
 
 
 # the base hostname & protocol for your site
-url: "http://robobench.net"
-
+url:
 #twitter_username: manavsehgal
 #github_username:  manavsehgal
 
@@ -28,8 +27,9 @@ highlighter: pygments
 safe: true
 permalink: pretty # YYYY/MM/DD/page-title/index.html
 lsi: true # Lexical analysis (true) takes longer for higher quality
-# sass:
-#  style: :compressed
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Exclude from Jekyll processing
 
