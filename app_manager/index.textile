@@ -25,9 +25,11 @@ Individual _capabilities_ could be exposed through the same technique, but that 
 h2. Quick Start
 
 h3. Dependencies
+
 The main dependency is the Docker container framework. Instructions can be found at https://docs.docker.com/.
 
 h3. Download Application Manager
+
 To download the _rapman_ application manager, clone the ("_rapman-subuser_ repository"):https://github.com/Robobench/rapman-subuser . Then add the path of the directory to your path - for example:
 
 bc. In ~/.bashrc
