@@ -1,6 +1,6 @@
 ---
 layout: robobench_landing
-title: RAPMAN: The Reproducible App Manager
+title: RAPMAN - The Reproducible App Manager
 description: The tool for downloading and managing Robobench Containerized Applications
 ---
 
