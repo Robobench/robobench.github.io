@@ -38,7 +38,7 @@ export PATH=$PATH:/path/to/subuser_base/logic
 
 h3. Look at available images
 
-bc.$ subuser list available
+bc. $ subuser list available
 
 Images available for instalation from the repo: default
 hrpsys_walking_mission:
