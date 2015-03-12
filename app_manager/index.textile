@@ -1,11 +1,79 @@
 ---
 layout: robobench_landing
-title: App Manager
+title: RAPMAN: The Reproducible App Manager
 description: The tool for downloading and managing Robobench Containerized Applications
 ---
+
+
+h2. Motivation
+
+This project began as an attempt to compile a group of demonstration applications similar to the _SPEC_ benchmarks with a focus on robotics applications and tasks. To capture a cross section of different robotics workloads, you have to install a number of different frameworks with different dependencies. To distribute these frameworks together, you need a way to distribute the code along with it's dependencies. Unfortunately, the canonical way of doing this through virtual machines. Virtual machines are generally too slow and limitted to run complex simulations well. More problematically, the result of benchmarking inside of a virtual machine are not the same as benchmarking outside of it. 
+
+Luckily, a new virtualization technology has recently arisen which allows encapsulation of the dependencies, easy distribution, and near-native machine performance. This new form of encapsulation is called ("_containerization_"):http://en.wikipedia.org/wiki/LXC . 
+
+To encourage adoption of this technology in the robotics community, we have created a tool for distributing robotics applications.  We hope that it will be used to make robotics software more reproducible - allowing conferences and workshops to require submissions of working simulations, helping maintain tutorials in working order, and overall adding longevity to the lifecycle of runnable, disceminable robotics software that demonstrates complex capabilities. 
+
+h3. What Are _rapman_ Apps?
+
+In a nutshell, rapman _apps_ are benchmarkable demos.
+
+The purpose of the rapman manager is distributing completely encapsulated software that is configured to run and perform some simulation, demonstration, or benchmarking task.  This is not in the sense of an functional application, as the _apps_ are not meant to expose a capability for the user to use, but rather to demonstrate some capability. For example, a _navigation app_ would not expose some path planning service - rather it would run a simulation of a robot using an existing navigation capability. 
+
+Individual _capabilities_ could be exposed through the same technique, but that would require coordination between multiple encapsulated entities, which we do not directly support as of now. 
+
+
+h2. Quick Start
+
+h3. Download Application Manager
+To download the _rapman_ application manager, clone the ("_rapman-subuser_ repository"):https://github.com/Robobench/rapman-subuser . Then add the path of the directory to your path - for example:
+
+bc. In ~/.bashrc
+...
+export PATH=$PATH:/path/to/subuser_base/logic
+
+h3. Look at available images
+
+bc.$ subuser list available
+---
+Images available for instalation from the repo: default
+hrpsys_walking_mission:
+ Description: hrpsys simulator framework with simple robot taking a few steps. 
+ Maintainer: Jonathan Weisz <jon.weisz (at) gmail dot com>
+ Last update time(version): None
+ Executable: /home/tester/Dev/run_test_walking.bash
+ Moderate permissions(These are probably safe):
+  Can access the network/internet.
+ Liberal permissions(These may pose a security risk):
+  Can display X11 windows and interact with your X11 server directly(log keypresses, read over your shoulder ect.)
+ Can access your graphics-card directly for OpenGL tasks.
+reem_nav_mission:
+ Description: REEM robot navigating between two rooms in a Gazebo simulation.
+ Maintainer: Jonathan Weisz <jon.weisz (at) gmail dot com>
+ Last update time(version): None
+ Executable: /home/tester/Dev/reem_sim_ws/reem_sim_ws_scripts/reem_navigation_launch.bash
+ Moderate permissions(These are probably safe):
+  Can access the network/internet.
+ Liberal permissions(These may pose a security risk):
+  Can display X11 windows and interact with your X11 server directly(log keypresses, read over your shoulder ect.)
+ Can access your graphics-card directly for OpenGL tasks.
+
+
+As you can see, this shows the available apps in the current repository, along with the metadata about the 
+
+
+h2. What is the rapman?
+
+At it's core, _rapman_ is a tool for distributing ("_containerized_"):http://en.wikipedia.org/wiki/LXC applications. 
+
+h2. Why Have Another App Manager?
+
+
 
 h2. Test 1
 
 h2. Test 2
 
 h2. Test 3
+
+
+<!--Installing and running robotics frameworks generally requires running installation or configuration scripts with elevated priviliges. This is not something we usually think about, but it shouldn't be hidden. -->
