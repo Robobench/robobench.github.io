@@ -16,6 +16,8 @@ var pngquant    = require('imagemin-pngquant');
 // Test
 var csslint     = require('gulp-csslint');
 var jshint      = require('gulp-jshint');
+var compass = require('gulp-compass');
+
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -71,11 +73,18 @@ gulp.task('coffee', ['jekyll-build'], function() {
  */
 gulp.task('sass', function () {
     return gulp.src('_sass/main.scss')
-        .pipe(sass({
+        .pipe(compass({
+	    css: 'test_css',
+	    sass: '_sass',
+	    errorHandler: browserSync.notify, 
+	    style: 'expanded'
+	}))
+
+/*	.pipe(sass({
             includePaths: ['scss'],
             style: 'expanded',              // Human readable CSS
             onError: browserSync.notify
-        }))
+        }))*/
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('_site/css'))
         .pipe(gulp.dest('css'))
@@ -107,7 +116,7 @@ gulp.task('images', function () {
 gulp.task('watch', function () {
     gulp.watch('coffee/*.js', ['jekyll-build', 'coffee']);
     gulp.watch('_sass/*.scss', ['sass']);
-    gulp.watch(['index.html', '_layouts/*.html', '_includes/*.html', '_posts/*', '_posts/*/*', '_data/*'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', '_layouts/*.html', '_includes/*.html', '_posts/*', '_posts/*/*', '_data/*','app_manager/*.textile'], ['jekyll-rebuild']);
 });
 
 /**

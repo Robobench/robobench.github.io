@@ -4,43 +4,54 @@ title: RAPMAN - The Reproducible App Manager
 description: The tool for downloading and managing Robobench Containerized Applications
 ---
 
+h2(ui teal dividing header content). Motivation
 
-h2. Motivation
+This project began as an attempt to compile a group of demonstration applications similar to the _SPEC_ benchmarks with a focus on robotics applications and tasks. 
 
-This project began as an attempt to compile a group of demonstration applications similar to the _SPEC_ benchmarks with a focus on robotics applications and tasks. To capture a cross section of different robotics workloads, you have to install a number of different frameworks with different dependencies. To distribute these frameworks together, you need a way to distribute the code along with it's dependencies. Unfortunately, the canonical way of doing this through virtual machines. Virtual machines are generally too slow and limitted to run complex simulations well. More problematically, the result of benchmarking inside of a virtual machine are not the same as benchmarking outside of it. 
+To capture a cross section of different robotics workloads, you have to install a number of different frameworks with different dependencies. To distribute these frameworks together, you need a way to distribute the code along with it's dependencies. The canonical way of doing this through virtual machines which are too slow and limited to run complex simulations. More problematically for our purposes, the result of benchmarking inside of a virtual machine are not the same as benchmarking outside of it. 
 
-Luckily, a new virtualization technology has recently arisen which allows encapsulation of the dependencies, easy distribution, and near-native machine performance. This new form of encapsulation is called ("_containerization_"):http://en.wikipedia.org/wiki/LXC . 
+Luckily, a new virtualization technology has recently arisen which allows encapsulation of the dependencies, easy distribution, and near-native machine performance. This new form of encapsulation is called "**containerization**":http://en.wikipedia.org/wiki/LXC. 
 
-To encourage adoption of this technology in the robotics community, we have created a tool for distributing robotics applications.  We hope that it will be used to make robotics software more reproducible - allowing conferences and workshops to require submissions of working simulations, helping maintain tutorials in working order, and overall adding longevity to the lifecycle of runnable, disceminable robotics software that demonstrates complex capabilities. 
+To encourage adoption of this technology in the robotics community, we have created a tool specifically geared towards the robotics community that simplifies the distribution of containerized applications. __The design goals of this tool are to:__
 
-h3. What Are _rapman_ Apps?
+<div class="ui centered page segment">
+     
+     * Support the distribution of complex robotics simulations as through an **app**-like paradigm. 
+     * Allow sharing of groups of cloud hosted, well encapsulated **apps**.
+     * Manage a set of installed **apps** to allow single command installation and removal.
+     * Abstract the details of configuring the applications to particular host machines. 
 
-In a nutshell, rapman _apps_ are benchmarkable demos.
+</div>
 
-The purpose of the rapman manager is distributing completely encapsulated software that is configured to run and perform some simulation, demonstration, or benchmarking task.  This is not in the sense of an functional application, as the _apps_ are not meant to expose a capability for the user to use, but rather to demonstrate some capability. For example, a _navigation app_ would not expose some path planning service - rather it would run a simulation of a robot using an existing navigation capability. 
+The high level goal of this tool is to support reproducibility of complex simulations. We envision this tool being used to support robotics research in a number of ways, from enabling a stronger peer review process to lowering the barrier to entry for new roboticists by ensuring that tutorials and demos are always in working order. 
+
+h4(ui red header content). What Are **rapman** Apps?
+
+In a nutshell, rapman **apps** are benchmarkable demos.
+
+The purpose of the rapman manager is distributing completely encapsulated software that is configured to run and perform some simulation, demonstration, or benchmarking task.  This is not in the sense of an functional application, as the **app** are not meant to expose a capability for the user to use, but rather to demonstrate some capability. For example, a _navigation app_ would not expose some path planning service - rather it would run a simulation of a robot using an existing navigation capability. 
 
 Individual _capabilities_ could be exposed through the same technique, but that would require coordination between multiple encapsulated entities, which we do not directly support as of now. 
 
 
-h2. Quick Start
+h2(ui teal dividing header content). Quick Start
 
-h3. Dependencies
+h3(ui red dividing header content). Dependencies
 
-The main dependency is the Docker container framework. Instructions can be found at https://docs.docker.com/.
+The main dependency is the Docker container framework. Instructions can be found "here":https://docs.docker.com/.
 
-h3. Download Application Manager
+h3(ui green dividing header content). Download Application Manager
 
-To download the _rapman_ application manager, clone the ("_rapman-subuser_ repository"):https://github.com/Robobench/rapman-subuser . Then add the path of the directory to your path - for example:
+To download the _rapman_ application manager, clone the "rapman-subuser repository":https://github.com/Robobench/rapman-subuser/ . Then add the path of the directory to your path - for example:
 
-bc. In ~/.bashrc
-...
-export PATH=$PATH:/path/to/subuser_base/logic
+p(ui centered page segment inverted content). $ git clone https://github.com/Robobench/rapman-subuser.git /path/to/rapman_base/
+$ echo PATH=$PATH:/path/to/rapman_base/logic >> ~/.bashrc
 
-h3. Look at available images
+h4(ui green dividing header content). List available images
 
-bc. $ subuser list available
+p(ui centered page segment inverted content). $ rapman list-available-apps
 
-Images available for instalation from the repo: default
+pre(ui centered page segment inverted content ). Images available for instalation from the repo: default
 hrpsys_walking_mission:
  Description: hrpsys simulator framework with simple robot taking a few steps. 
  Maintainer: Jonathan Weisz <jon.weisz (at) gmail dot com>
@@ -63,51 +74,52 @@ reem_nav_mission:
  Can access your graphics-card directly for OpenGL tasks.
 
 
-As you can see, this shows the available apps in the current repository, along with the metadata about the 
+This shows the available apps in the current repository, along with the metadata about the permissions needed by the app, the executable run inside the container to launch the app, and the plain text description of the app.
 
 
-h3. Installing an App
+h4(ui green dividing header content). Installing an App
 
-bc. rapman add <installed-app-name> <repository-app-name>@<repository>
+pre(ui segment). rapman add <installed-app-name> <repository-app-name>@<repository>
 
 i.e.
 
-bc. rapman add hrpsys_walking_mission hrpsys_walking_mission@default
+pre(ui segment inverted). $ rapman add hrpsys_walking_mission hrpsys_walking_mission@default
 
 This will download and install the base application, but it is not in a final, runnable configuration until the first time it is run. 
 
 
-h3. Running an App
+h4(ui green dividing header content). Running an App
 
 Running an app will launch a full simulation of a robot doing something. These simulations may take several seconds to start up. 
 
 
-bc. rapman run <installed-app-name> 
+pre(ui segment). rapman run <installed-app-name> 
 
 i.e.
 
-bc. rapman run hrpsys_walking_mission hrpsys_walking_mission@default
+pre(ui segment inverted). $ rapman run hrpsys_walking_mission hrpsys_walking_mission@default
 
 This will load the hrpsys_walking_mission's image, and the run the command shown in the executable field of the app description, which in this case is /home/tester/Dev/run_test_walking.bash . This is a script that launches the simulation. 
 
-To take a close look, do:
+To fully introspect the internals of the app, you can do:
 
-bc. rapman run hrpsys_walking_mission hrpsys_walking_mission@default --enter
+pre(ui segment inverted). $ rapman run hrpsys_walking_mission hrpsys_walking_mission@default --enter
 
-This will drop you into a root prompt inside of the image.
+This will drop you into a prompt inside of the image.
 
 
-h3. Removing an App
+h4(ui green dividing header content). Removing an App
+
 When you are finished with an app, clean it up by doing this:
 
-bc. rapman remove <installed-app-name> 
+pre(ui segment inverted). rapman remove <installed-app-name> 
 
 
-h2. What is the rapman?
+h4(ui green dividing header content). What is the rapman?
 
-At it's core, _rapman_ is a tool for distributing ("_containerized_"):http://en.wikipedia.org/wiki/LXC applications. It is heavily based on another tool for containerizing userspace applications named _subuser_. 
+At it's core, _rapman_ is a tool for distributing ("_containerized_"):http://en.wikipedia.org/wiki/LXC applications. It is a fork of another tool for containerizing userspace applications named "_subuser_":http://subuser.org/ which has extended capabilities and is focused more an ease of use than security. 
 
-h2. Why Have Another App Manager?
+h4(ui green dividing header content). Why Have Another App Manager?
 
 Containerization is going to play a major role in reproducible software in every domain, but the robotics domain has some requirements that are antithetical to the goals of the broader _containerization_ community. To get applications that are GPU intensive or use GPU computation to work correctly, we have to install specific drivers for the host machine. In the broader community, this is considered terrible practice. In myriad other ways, the tools that are popular in the _containerization_ community right now are not well suited to our needs. 
 
