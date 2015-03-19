@@ -1,0 +1,47 @@
+---
+layout: robobench_tutorial
+title: Robobench CI Integration
+description: Automated deployment of appified tests and demos
+---
+h2(ui teal dividing header content). Motivation
+
+Keeping demos and tutorials up to date is a challenge for any open source project. Additionally, integration testing tends to be limited by the capabilities provided by most CI services. More thorough integration tests would closely approximate the kind of workload simulations that we are interested in benchmarking, or at the least would serve as a reasonable starting point for creating such. Thus, we have adapted the Drone-CI service to support containerized integration tests with GPU capabilities. The CI module can also package these integration tests as rapman apps.
+
+h2(ui teal dividing header content). Rapman Testing Module
+
+The Rapman Testing Module is implemented as a publishing plugin for Drone-CI. 
+In order to use the Rapman Testing Module, one adds a section to the .drone.yml of the project as follows:
+
+pre(ui segment). image: ubuntu:12.04 &IMAGENAME
+env: &BUILDENV
+   - PATH=$PATH:$HOME/scrtips/
+script: &BUILDSCRIPT
+  - sudo apt-get update
+  - sudo apt-get install ros-groovy-pr2-interactive-manipulation
+      ... more instructions ...
+publish:
+  rapman:
+    tests:
+      - name: "pr2_grasping_test"
+        description: "A simulation of the pr2 grasping an object on a table. Tests integration of the pr2_interactive_manipulation pipeline"
+        enabled: yes
+	command: "$HOME/scripts/test_grasp_script.bash"
+      - name: "pr2_nav_test"
+        description: " A simulation of the pr2 navigating through an area autonomously. Tests integration of pr2_interactive_manipulation navigation pipeline"
+	enabled: yes
+	command: "$HOME/scripts/test_nav_script.bash"
+    base_image: *IMAGENAME
+    build_script: << *BUILDSCRIPT
+    build_environment: << *BUILDENV
+    target_repo: "https://github.com/robobench/Robobench-fake-repo.git"
+      
+
+h3(ui teal dividing header content). Access to hosted CI
+
+To access the instance of the Drone CI module that is currently hosted, email the moderator of the robobench github organization and ask to be added to the organization. More detailed instructions for utilizing this service are forthcoming. 
+
+
+h3(ui teal dividing header content). Running CI locally, 
+
+_Rapman_ is distributed with a containerized version of the Drone CI service. To make use of it, you will need a valid Github API key, and configure it according to the instructions on www.github.com/drone/drone
+
