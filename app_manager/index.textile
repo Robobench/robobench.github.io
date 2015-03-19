@@ -1,9 +1,8 @@
 ---
-layout: robobench_landing
+layout: robobench_tutorial
 title: RAPMAN - The Reproducible App Manager
 description: The tool for downloading and managing Robobench Containerized Applications
 ---
-
 h2(ui teal dividing header content). Motivation
 
 This project began as an attempt to compile a group of demonstration applications similar to the _SPEC_ benchmarks with a focus on robotics applications and tasks. 
@@ -115,9 +114,42 @@ When you are finished with an app, clean it up by doing this:
 pre(ui segment inverted). rapman remove <installed-app-name> 
 
 
-h4(ui green dividing header content). What is the rapman?
+h3(ui green dividing header content). What is rapman?
 
-At it's core, _rapman_ is a tool for distributing ("_containerized_"):http://en.wikipedia.org/wiki/LXC applications. It is a fork of another tool for containerizing userspace applications named "_subuser_":http://subuser.org/ which has extended capabilities and is focused more an ease of use than security. 
+At it's core, _rapman_ is a tool for distributing "containerized":http://en.wikipedia.org/wiki/LXC applications along with configuration specifications that control how the runtime application is built.  It is a fork of another tool for containerizing userspace applications named "subuser":http://subuser.org/ which has extended capabilities and is focused more an ease of use than security. Documentation for the _rapman_ fork is in progress, but the documentation of the **Subuser** project remains mostly relevant.  
+
+h4(ui green dividing header content). rapman App repositories
+
+A rapman app belongs to a repository of apps. The structure of a subuser application is the following:
+ 
+pre(ui segment). repository_name / app_name / docker-image / SubuserImagefile   <--- This stores the build configuration of the container
+       	       		  		    / permissions.json <--- This stores the run configuration of the container
+
+
+_repository_name_ may refer either to a repository configured in the *$SUBUSER_HOME/repositories.json* , or it may refer to a remote git URL with the appropriate directory structure.
+
+h4(ui green dividing header content). Creating a new App
+
+To create a new app, create a new subdirectory inside the repository directory. Create a new SubuserImagefile that installs the necessary prerequisites for the application, and copy the permissions.json file from a similar app. If no similar app is available, see the documentation at _subuser.org_ and the following section to understand how the permissions.json effects the runtime configuration.
+
+A variety of reasonable starting images can be found in the "Robobench benchmark V1.0 repository":https://github.com/Robobench/robobench-subuser-registry.git
+
+Creating an app can be automated through the "Robobench Drone CI":drone_ci
+
+h4(ui green dividing header content). Rapman Runtime Permissions
+
+The *permissions.json* file stores a set of flags that modify the configuration of the container that encapsulates the app. _subuser.org_ documents the meaning of most of the options. The modifications made in _rapman_ are:
+
+pre(ui segment). ports: Maps ports from the host to the client application.
+graphics-card: Forwards the specific graphics card related devices to the client application. i.e. /dev/nvidia0 for NVidia card users. 
+
+
+Additionally, the _x11_ and _graphics-card_ permissions have been modified to support more applications. Specifically:
+
+ * _rapman_ ensures that a .X11 socket and xauthority file are shared with the client application and that the environment variables in the app are set up to use them correctly. 
+ * QT based applications are known to have issues with forwarding over _x11_ sockets unless the _QT_GRAPHICSSYSTEM_ environment variable is set to "native". 
+* When applicable, _rapman_ will install the same version of the GPU driver in the host as is running on the client. 
+
 
 h4(ui green dividing header content). Why Have Another App Manager?
 
