@@ -1,0 +1,25 @@
+/*-----------
+     Item
+------------*/
+@import 'compass/typography/links/link-colors';
+
+.global .red {
+  color: #FF0000;	
+}
+
+.global .light-red {
+  color: #FFDADA;	
+}
+
+.global .light-green {
+  color: #DAFFDA;
+}
+
+.global .light-green .visitedblue{
+	color: #DAFFDA;
+	&:visited{
+	color: #00FFFF !important;	
+	}
+}
+
+
