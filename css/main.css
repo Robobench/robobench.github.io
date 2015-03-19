@@ -588,8 +588,15 @@ h1, h2, h3, h4, h5 {
 }
 
 .global .light-green .visitedblue {
-  color: EEFFEE;
+  color: #DAFFDA;
 }
 .global .light-green .visitedblue:visited {
-  color: #008800 !important;
+  color: #00FFFF !important;
+}
+
+/*--------------
+    Tutorial
+---------------*/
+.global .grey-background {
+  background-color: #F0F0F0;
 }
