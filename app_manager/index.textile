@@ -50,7 +50,7 @@ h4(ui green dividing header content). List available images
 
 p(ui centered page segment inverted content). $ rapman list-available-apps
 
-pre(ui centered page segment inverted content ). Images available for instalation from the repo: default
+pre(ui centered page segment inverted content ). Images available for instalation from the repo: robobench-demos
 hrpsys_walking_mission:
  Description: hrpsys simulator framework with simple robot taking a few steps. 
  Maintainer: Jonathan Weisz <jon.weisz (at) gmail dot com>
@@ -82,7 +82,7 @@ pre(ui segment). rapman add <installed-app-name> <repository-app-name>@<reposito
 
 i.e.
 
-pre(ui segment inverted). $ rapman add hrpsys_walking_mission hrpsys_walking_mission@default
+pre(ui segment inverted). $ rapman add hrpsys_walking_mission hrpsys_walking_mission@robobench-demos
 
 This will download and install the base application, but it is not in a final, runnable configuration until the first time it is run. 
 
@@ -96,13 +96,13 @@ pre(ui segment). rapman run <installed-app-name>
 
 i.e.
 
-pre(ui segment inverted). $ rapman run hrpsys_walking_mission hrpsys_walking_mission@default
+pre(ui segment inverted). $ rapman run hrpsys_walking_mission hrpsys_walking_mission@robobench-demos
 
 This will load the hrpsys_walking_mission's image, and the run the command shown in the executable field of the app description, which in this case is /home/tester/Dev/run_test_walking.bash . This is a script that launches the simulation. 
 
 To fully introspect the internals of the app, you can do:
 
-pre(ui segment inverted). $ rapman run hrpsys_walking_mission hrpsys_walking_mission@default --enter
+pre(ui segment inverted). $ rapman run hrpsys_walking_mission hrpsys_walking_mission@robobench-demos --enter
 
 This will drop you into a prompt inside of the image.
 
