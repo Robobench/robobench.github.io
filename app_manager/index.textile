@@ -1,82 +1,38 @@
 ---
-layout: robobench_tutorial
-title: RAPMAN - The Reproducible App Manager
-description: The tool for downloading and managing Robobench Containerized Applications
+layout: fusion
+title: RAPMAN - The Robotics Application Manager
+description: The tool for downloading and using RoboBench containerized applications
 ---
-h2(ui teal dividing header content). Motivation
 
-This project began as an attempt to compile a group of demonstration applications similar to the _SPEC_ benchmarks with a focus on robotics applications and tasks. 
+h1(ui teal dividing header content). What is rapman?
 
-To capture a cross section of different robotics workloads, you have to install a number of different frameworks with different dependencies. To distribute these frameworks together, you need a way to distribute the code along with it's dependencies. The canonical way of doing this through virtual machines which are too slow and limited to run complex simulations. More problematically for our purposes, the result of benchmarking inside of a virtual machine are not the same as benchmarking outside of it. 
+RAPMAN is a tool for deploying robotics simulations on any Linux machine, in a ready-to-run state. The goal is to make installing and running robotics simulations as easy as downloading and running a pre-compiled application.
 
-Luckily, a new virtualization technology has recently arisen which allows encapsulation of the dependencies, easy distribution, and near-native machine performance. This new form of encapsulation is called "**containerization**":http://en.wikipedia.org/wiki/LXC. 
+Using RAPMAN, you can download and run applications containing robots performing tasks in simulation. The applications are delivered using Linux "**containers**":http://en.wikipedia.org/wiki/LXC, which ensure that the simulations come equipped with the libraries needed for it to run.
 
-To encourage adoption of this technology in the robotics community, we have created a tool specifically geared towards the robotics community that simplifies the distribution of containerized applications. __The design goals of this tool are to:__
+RAPMAN addresses a challenge in robotics research and education: useful but complex applications may not reliably compile a few months after publication, usually due to changes in underlying dependencies, missing libraries, obsolete documentation, or changes in the host machine. RAPMAN solves these problems by:
 
 <div class="ui centered page segment">
-     
-     * Support the distribution of complex robotics simulations as through an **app**-like paradigm. 
-     * Allow sharing of groups of cloud hosted, well encapsulated **apps**.
-     * Manage a set of installed **apps** to allow single command installation and removal.
-     * Abstract the details of configuring the applications to particular host machines. 
-
+* Distributing complex robotics simulations as complete packages, similar to **apps** for desktop and mobile computers.
+* Allowing discovery and downloading of **apps** from cloud hosted repositories.
+* Installing, managing, and removing the **apps** on a host machine from a single command line tool.
+* Hiding the details of configuring the **apps** to run on specific host machines.
 </div>
 
-The high level goal of this tool is to support reproducibility of complex simulations. We envision this tool being used to support robotics research in a number of ways, from enabling a stronger peer review process to lowering the barrier to entry for new roboticists by ensuring that tutorials and demos are always in working order. 
+h1(ui teal dividing header content). Quick Start: Running an App
 
-h4(ui red header content). What Are **rapman** Apps?
-
-In a nutshell, rapman **apps** are benchmarkable demos.
-
-The purpose of the rapman manager is distributing completely encapsulated software that is configured to run and perform some simulation, demonstration, or benchmarking task.  This is not in the sense of an functional application, as the **app** are not meant to expose a capability for the user to use, but rather to demonstrate some capability. For example, a _navigation app_ would not expose some path planning service - rather it would run a simulation of a robot using an existing navigation capability. 
-
-Individual _capabilities_ could be exposed through the same technique, but that would require coordination between multiple encapsulated entities, which we do not directly support as of now. 
-
-
-h2(ui teal dividing header content). Quick Start
-
-h3(ui red dividing header content). Dependencies
+h2(ui green dividing header content). Dependencies
 
 The main dependency is the Docker container framework. Instructions can be found "here":https://docs.docker.com/.
 
-h3(ui green dividing header content). Download Application Manager
+h2(ui green dividing header content). Download Application Manager
 
-To download the _rapman_ application manager, clone the "rapman-subuser repository":https://github.com/Robobench/rapman-subuser/ . Then add the path of the directory to your path - for example:
+To download the _rapman_ application manager, clone the "rapman-subuser repository":https://github.com/RoboBench/rapman-subuser/ . Then add the path of the directory to your path - for example:
 
-p(ui centered page segment inverted content). $ git clone https://github.com/Robobench/rapman-subuser.git /path/to/rapman_base/
+p(ui centered page segment inverted content). $ git clone https://github.com/RoboBench/rapman-subuser.git /path/to/rapman_base/
 $ echo PATH=$PATH:/path/to/rapman_base/logic >> ~/.bashrc
 
-h4(ui green dividing header content). List available images
-
-p(ui centered page segment inverted content). $ rapman list-available-apps
-
-pre(ui centered page segment inverted content ). Images available for instalation from the repo: robobench-demos
-hrpsys_walking_mission:
- Description: hrpsys simulator framework with simple robot taking a few steps. 
- Maintainer: Jonathan Weisz <jon.weisz (at) gmail dot com>
- Last update time(version): None
- Executable: /home/tester/Dev/run_test_walking.bash
- Moderate permissions(These are probably safe):
-  Can access the network/internet.
- Liberal permissions(These may pose a security risk):
-  Can display X11 windows and interact with your X11 server directly(log keypresses, read over your shoulder ect.)
- Can access your graphics-card directly for OpenGL tasks.
-reem_nav_mission:
- Description: REEM robot navigating between two rooms in a Gazebo simulation.
- Maintainer: Jonathan Weisz <jon.weisz (at) gmail dot com>
- Last update time(version): None
- Executable: /home/tester/Dev/reem_sim_ws/reem_sim_ws_scripts/reem_navigation_launch.bash
- Moderate permissions(These are probably safe):
-  Can access the network/internet.
- Liberal permissions(These may pose a security risk):
-  Can display X11 windows and interact with your X11 server directly(log keypresses, read over your shoulder ect.)
- Can access your graphics-card directly for OpenGL tasks.
-
-
-This shows the available apps in the current repository, along with the metadata about the permissions needed by the app, the executable run inside the container to launch the app, and the plain text description of the app.
-
-
-h4(ui green dividing header content). Installing an App
+h2(ui green dividing header content). Installing an App
 
 pre(ui segment). rapman add <installed-app-name> <repository-app-name>@<repository>
 
@@ -84,21 +40,47 @@ i.e.
 
 pre(ui segment inverted). $ rapman add hrpsys_walking_mission hrpsys_walking_mission@robobench-demos
 
-This will download and install the base application, but it is not in a final, runnable configuration until the first time it is run. 
+This will download and install the base application, but it is not in a final, runnable configuration until the first time it is run.
 
+h2(ui green dividing header content). List Available Apps
 
-h4(ui green dividing header content). Running an App
+p(ui centered page segment inverted content). $ rapman list-available-apps
 
-Running an app will launch a full simulation of a robot doing something. These simulations may take several seconds to start up. 
+pre(ui centered page segment inverted content ). Images available for instalation from the repo: robobench-demos
+hrpsys_walking_mission:
+ Description: hrpsys simulator framework with simple robot taking a few steps.
+ Maintainer: Jonathan Weisz <jon.weisz (at) gmail dot com>
+ Last update time(version): None
+ Executable: /home/tester/Dev/run_test_walking.bash
+ Moderate permissions(These are probably safe):
+ Can access the network/internet.
+ Liberal permissions(These may pose a security risk):
+ Can display X11 windows and interact with your X11 server directly(log keypresses, read over your shoulder ect.)
+ Can access your graphics-card directly for OpenGL tasks.
+reem_nav_mission:
+ Description: REEM robot navigating between two rooms in a Gazebo simulation.
+ Maintainer: Jonathan Weisz <jon.weisz (at) gmail dot com>
+ Last update time(version): None
+ Executable: /home/tester/Dev/reem_sim_ws/reem_sim_ws_scripts/reem_navigation_launch.bash
+ Moderate permissions(These are probably safe):
+ Can access the network/internet.
+ Liberal permissions(These may pose a security risk):
+ Can display X11 windows and interact with your X11 server directly(log keypresses, read over your shoulder ect.)
+ Can access your graphics-card directly for OpenGL tasks.
 
+This shows the available apps in the current repository, along with the metadata about the permissions needed by the app, the executable run inside the container to launch the app, and the plain text description of the app.
 
-pre(ui segment). rapman run <installed-app-name> 
+h2(ui green dividing header content). Running an App
+
+Running an app will launch a full simulation of a robot doing something. These simulations may take several seconds to start up.
+
+pre(ui segment). rapman run <installed-app-name>
 
 i.e.
 
 pre(ui segment inverted). $ rapman run hrpsys_walking_mission hrpsys_walking_mission@robobench-demos
 
-This will load the hrpsys_walking_mission's image, and the run the command shown in the executable field of the app description, which in this case is /home/tester/Dev/run_test_walking.bash . This is a script that launches the simulation. 
+This will load the hrpsys_walking_mission's image, and the run the command shown in the executable field of the app description, which in this case is /home/tester/Dev/run_test_walking.bash . This is a script that launches the simulation.
 
 To fully introspect the internals of the app, you can do:
 
@@ -106,59 +88,66 @@ pre(ui segment inverted). $ rapman run hrpsys_walking_mission hrpsys_walking_mis
 
 This will drop you into a prompt inside of the image.
 
-
-h4(ui green dividing header content). Removing an App
+h2(ui green dividing header content). Removing an App
 
 When you are finished with an app, clean it up by doing this:
 
-pre(ui segment inverted). rapman remove <installed-app-name> 
+pre(ui segment inverted). rapman remove <installed-app-name>
 
+h1(ui teal dividing header content). Quick Start: Creating an App
 
-h3(ui green dividing header content). What is rapman?
+h2(ui green dividing header content). What Are **rapman** Apps?
 
-At it's core, _rapman_ is a tool for distributing "containerized":http://en.wikipedia.org/wiki/LXC applications along with configuration specifications that control how the runtime application is built.  It is a fork of another tool for containerizing userspace applications named "subuser":http://subuser.org/ which has extended capabilities and is focused more an ease of use than security. Documentation for the _rapman_ fork is in progress, but the documentation of the **Subuser** project remains mostly relevant.  
+In a nutshell, rapman **apps** are benchmarkable demos.
 
-h4(ui green dividing header content). rapman App repositories
+The purpose of the rapman manager is distributing completely encapsulated software that is configured to run and perform some simulation, demonstration, or benchmarking task. This is not in the sense of an functional application, as the **app** are not meant to expose a capability for the user to use, but rather to demonstrate some capability. For example, a _navigation app_ would not expose some path planning service - rather it would run a simulation of a robot using an existing navigation capability.
+
+Individual _capabilities_ could be exposed through the same technique, but that would require coordination between multiple encapsulated entities, which we do not directly support as of now.
+
+h2(ui green dividing header content). rapman App Repositories
 
 A rapman app belongs to a repository of apps. The structure of a subuser application is the following:
- 
-pre(ui segment). repository_name / app_name / docker-image / SubuserImagefile   <--- This stores the build configuration of the container
-       	       		  		    / permissions.json <--- This stores the run configuration of the container
 
+pre(ui segment). repository_name / app_name / docker-image / SubuserImagefile <--- This stores the build configuration of the container
+/ permissions.json <--- This stores the run configuration of the container
 
 _repository_name_ may refer either to a repository configured in the *$SUBUSER_HOME/repositories.json* , or it may refer to a remote git URL with the appropriate directory structure.
 
-h4(ui green dividing header content). Creating a new App
+h2(ui green dividing header content). Creating a New App
 
 To create a new app, create a new subdirectory inside the repository directory. Create a new SubuserImagefile that installs the necessary prerequisites for the application, and copy the permissions.json file from a similar app. If no similar app is available, see the documentation at _subuser.org_ and the following section to understand how the permissions.json effects the runtime configuration.
 
-A variety of reasonable starting images can be found in the "Robobench benchmark V1.0 repository":https://github.com/Robobench/robobench-subuser-registry.git
+A variety of reasonable starting images can be found in the "RoboBench benchmark V1.0 repository":https://github.com/RoboBench/robobench-subuser-registry.git
 
-Creating an app can be automated through the "Robobench Drone CI":drone_ci
+Creating an app can be automated through the "RoboBench Drone CI":drone_ci
 
-h4(ui green dividing header content). Rapman Runtime Permissions
+h2(ui green dividing header content). Rapman Runtime Permissions
 
 The *permissions.json* file stores a set of flags that modify the configuration of the container that encapsulates the app. _subuser.org_ documents the meaning of most of the options. The modifications made in _rapman_ are:
 
 pre(ui segment). ports: Maps ports from the host to the client application.
-graphics-card: Forwards the specific graphics card related devices to the client application. i.e. /dev/nvidia0 for NVidia card users. 
-
+graphics-card: Forwards the specific graphics card related devices to the client application. i.e. /dev/nvidia0 for NVidia card users.
 
 Additionally, the _x11_ and _graphics-card_ permissions have been modified to support more applications. Specifically:
 
- * _rapman_ ensures that a .X11 socket and xauthority file are shared with the client application and that the environment variables in the app are set up to use them correctly. 
- * QT based applications are known to have issues with forwarding over _x11_ sockets unless the _QT_GRAPHICSSYSTEM_ environment variable is set to "native". 
-* When applicable, _rapman_ will install the same version of the GPU driver in the host as is running on the client. 
+* _rapman_ ensures that a .X11 socket and xauthority file are shared with the client application and that the environment variables in the app are set up to use them correctly.
+* QT based applications are known to have issues with forwarding over _x11_ sockets unless the _QT_GRAPHICSSYSTEM_ environment variable is set to "native".
+* When applicable, _rapman_ will install the same version of the GPU driver in the host as is running on the client.
 
+h1(ui teal dividing header content). Why Have Another App Manager?
 
-h4(ui green dividing header content). Why Have Another App Manager?
+The high level goal of this tool is to support reproducibility of complex simulations. We envision this tool being used to support robotics research in a number of ways, from enabling a stronger peer review process to lowering the barrier to entry for new roboticists by ensuring that tutorials and demos are always in working order.
 
-Containerization is going to play a major role in reproducible software in every domain, but the robotics domain has some requirements that are antithetical to the goals of the broader _containerization_ community. To get applications that are GPU intensive or use GPU computation to work correctly, we have to install specific drivers for the host machine. In the broader community, this is considered terrible practice. In myriad other ways, the tools that are popular in the _containerization_ community right now are not well suited to our needs. 
+This project began as an attempt to compile a group of demonstration applications similar to the _SPEC_ benchmarks with a focus on robotics applications and tasks. We initially found it hard to share the installed applications among researchers, due to the large number of dependencies and frameworks needed to compile and run different robotics workloads.
 
-The rapman app manager allows us to have a turn-key solution for running and distributing complex demos. Additionally, rapman apps very well suited to creating sets of applications in an easily distributed, public, and version controlled way. An application set is a git repository, preferably on github, where each app is specified by a directory containing a build script for the image and a metadata file describing the configuration of the image. 
+To distribute these frameworks together, we needed need a way to distribute the code along with its dependencies. The classic way of doing this, using virtual machines, would require deploying whole operating systems, which would be too slow for running complex simulations. Luckily, a new virtualization technology allows encapsulation of the dependencies, easy distribution, and near-native machine performance. This new form of encapsulation is called "**containerization**":http://en.wikipedia.org/wiki/LXC.
 
+To encourage adoption of this technology in the robotics community, we have created a tool specifically geared towards the robotics community that simplifies the distribution of containerized applications.
 
+Containerization is going to play a major role in reproducible software in every domain, but the robotics domain has some requirements that are antithetical to the goals of the broader _containerization_ community. To get applications that are GPU intensive or use GPU computation to work correctly, we have to install specific drivers for the host machine. In the broader community, this is considered terrible practice. In myriad other ways, the tools that are popular in the _containerization_ community right now are not well suited to our needs.
 
+The rapman app manager allows us to have a turn-key solution for running and distributing complex demos. Additionally, rapman apps very well suited to creating sets of applications in an easily distributed, public, and version controlled way. An application set is a git repository, preferably on github, where each app is specified by a directory containing a build script for the image and a metadata file describing the configuration of the image.
 
+h2(ui green dividing header content). Learn More About rapman
 
-<!--Installing and running robotics frameworks generally requires running installation or configuration scripts with elevated priviliges. This is not something we usually think about, but it shouldn't be hidden. -->
+rapman is a fork of another tool for containerizing userspace applications named "subuser":http://subuser.org/ which has extended capabilities and is focused more an ease of use than security. Documentation for the _rapman_ fork is in progress, but the documentation of the **Subuser** project remains mostly relevant.
