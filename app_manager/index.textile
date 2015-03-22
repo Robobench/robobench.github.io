@@ -23,7 +23,7 @@ h1(ui teal dividing header content). Quick Start: Running an App
 
 h2(ui green dividing header content). Dependencies
 
-The main dependency is the Docker container framework. Instructions can be found "here":https://docs.docker.com/.
+The main dependency is the Docker container framework, version 1.13 or higher. Instructions can be found "here":https://docs.docker.com/. Installation instructions can be found "here":https://docs.docker.com/installation/#installation.
 
 h2(ui green dividing header content). Download Application Manager
 
