@@ -109,7 +109,7 @@ h2(ui green dividing header content). rapman App Repositories
 A rapman app belongs to a repository of apps. The structure of a subuser application is the following:
 
 pre(ui segment). repository_name / app_name / docker-image / SubuserImagefile <--- This stores the build configuration of the container
-/ permissions.json <--- This stores the run configuration of the container
+repository_name / app_name / permissions.json <--- This stores the run configuration of the container
 
 _repository_name_ may refer either to a repository configured in the *$SUBUSER_HOME/repositories.json* , or it may refer to a remote git URL with the appropriate directory structure.
 
