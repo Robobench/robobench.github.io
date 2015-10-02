@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+
+<!-- Page 1 -->
+<svg x="0" y="0" width="935" height="1210" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+style="display: block;margin-left: auto;margin-right: auto;">
+<defs>
+
+<style type="text/css"><![CDATA[
+
+.g2_1{
+fill: none;
+stroke: #000000;
+stroke-width: 2;
+stroke-linecap: round;
+stroke-linejoin: round;
+stroke-miterlimit: 4;
+stroke-dasharray: 1,3;
+}
+.g6_1{
+fill: none;
+stroke: #FFFFFF;
+stroke-width: 10;
+stroke-linecap: butt;
+stroke-linejoin: miter;
+stroke-miterlimit: 4;
+}
+.g7_1{
+fill: none;
+stroke: #000000;
+stroke-width: 4;
+stroke-linecap: butt;
+stroke-linejoin: miter;
+stroke-miterlimit: 4;
+}
+.g4_1{
+fill: #FFFFFF;
+}
+.g1_1{
+fill: #C2E1BB;
+}
+.g3_1{
+fill: none;
+stroke: #000000;
+stroke-width: 2;
+stroke-linecap: round;
+stroke-linejoin: round;
+stroke-miterlimit: 4;
+stroke-dasharray: 1,4;
+}
+.g5_1{
+fill: #A2DEF8;
+}
+
+.s5_1{
+font-size: 30.56px;
+font-family: QTONUP-Arial-BoldMT1;
+fill: #231F20;
+}
+.s1_1{
+font-size: 18.33px;
+font-family: QTONUP-Arial-BoldMT1;
+fill: #231F20;
+}
+.s4_1{
+font-size: 18.33px;
+font-family: QTONUP-ArialMT_21;
+fill: #231F20;
+}
+.s2_1{
+font-size: 18.33px;
+font-family: QTONUP-ArialMT1;
+fill: #231F20;
+}
+.s3_1{
+font-size: 21.39px;
+font-family: QTONUP-Arial-BoldMT1;
+fill: #231F20;
+}
+
+]]></style>
+
+</defs>
+<path d="M0,0
+L0,1210
+L935,1210
+L935,0 Z " 
+fill="#FFFFFF" stroke="none" />
+<path d="M34.8,450.5c0,0,-9.1,0,-9.1,9.2l0,47.1c0,0,0,9.2,9.1,9.2l865.4,0c0,0,9.1,0,9.1,-9.2l0,-47.1c0,0,0,-9.2,-9.1,-9.2Z" class="g1_1" />
+<text 
+x="35" 
+y="489" 
+textLength="106" 
+class="s1_1"
+>Container 0:</text>
+
+<text 
+x="158" 
+y="489" 
+textLength="83" 
+class="s2_1"
+>navigating</text>
+
+<text 
+x="282" 
+y="489" 
+textLength="52" 
+class="s2_1"
+>REEM</text>
+
+<text 
+x="405" 
+y="474" 
+textLength="39" 
+class="s2_1"
+>laser </text>
+
+<text 
+x="405" 
+y="504" 
+textLength="65" 
+class="s2_1"
+>scanner</text>
+
+<text 
+x="529" 
+y="489" 
+textLength="51" 
+class="s2_1"
+>OMPL</text>
+
+<text 
+x="652" 
+y="474" 
+textLength="54" 
+class="s2_1"
+>mobile </text>
+
+<text 
+x="652" 
+y="504" 
+textLength="39" 
+class="s2_1"
+>base</text>
+
+<text 
+x="776" 
+y="489" 
+textLength="64" 
+class="s2_1"
+>Gazebo</text>
+
+<path d="M32,451c-2.5,0.7,-5.7,2.6,-6.3,7.3" class="g2_1" />
+<path d="M25,462l0,43" class="g3_1" />
+<path d="M26.1,509.7c0.8,2.5,2.6,5.7,7.3,6.2" class="g2_1" />
+<path d="M37,516l861,0" class="g3_1" />
+<path d="M903,515.5c2.5,-0.7,5.7,-2.5,6.3,-7.2" class="g2_1" />
+<path d="M909,503l0,-42" class="g3_1" />
+<path d="M908.9,456.8c-0.8,-2.4,-2.6,-5.6,-7.3,-6.2" class="g2_1" />
+<path d="M897,450L36,450" class="g3_1" />
+<path d="M523.7,33.8c0,0,-9.1,0,-9.1,9.1l0,223.7c0,0,0,9.2,9.1,9.2l177.9,0c0,0,9.1,0,9.1,-9.2l0,-223.7c0,0,0,-9.1,-9.1,-9.1Z" class="g4_1" />
+<text 
+x="559" 
+y="68" 
+textLength="105" 
+class="s3_1"
+>CONTROL</text>
+
+<path d="M520.9,34.2c-2.5,0.8,-5.7,2.6,-6.3,7.3" class="g2_1" />
+<path d="M514,45l0,220" class="g3_1" />
+<path d="M515,269.5c0.8,2.4,2.6,5.6,7.3,6.2" class="g2_1" />
+<path d="M526,275l174,0" class="g3_1" />
+<path d="M704.4,275.3c2.5,-0.7,5.7,-2.6,6.2,-7.3" class="g2_1" />
+<path d="M710,263L710,44" class="g3_1" />
+<path d="M710.3,40.1c-0.8,-2.5,-2.6,-5.7,-7.3,-6.3" class="g2_1" />
+<path d="M698,33L525,33" class="g3_1" />
+<path d="M508.4,79.6c0,0,-9.1,0,-9.1,9.2l0,223.6c0,0,0,9.2,9.1,9.2l177.9,0c0,0,9.1,0,9.1,-9.2l0,-223.6c0,0,0,-9.2,-9.1,-9.2Z" class="g4_1" />
+<text 
+x="527" 
+y="114" 
+textLength="139" 
+class="s3_1"
+>PERCEPTION</text>
+
+<path d="M505.6,80.1c-2.5,0.7,-5.7,2.5,-6.2,7.2" class="g2_1" />
+<path d="M499,91l0,219" class="g3_1" />
+<path d="M499.7,315.3c0.8,2.4,2.6,5.7,7.3,6.2" class="g2_1" />
+<path d="M511,321l173,0" class="g3_1" />
+<path d="M689.1,321.1c2.5,-0.7,5.7,-2.5,6.3,-7.2" class="g2_1" />
+<path d="M695,309L695,90" class="g3_1" />
+<path d="M695,85.9c-0.8,-2.4,-2.6,-5.7,-7.3,-6.2" class="g2_1" />
+<path d="M683,79L509,79" class="g3_1" />
+<path d="M294.6,33.8c0,0,-9.2,0,-9.2,9.1l0,223.7c0,0,0,9.2,9.2,9.2l177.8,0c0,0,9.2,0,9.2,-9.2l0,-223.7c0,0,0,-9.1,-9.2,-9.1Z" class="g4_1" />
+<text 
+x="317" 
+y="68" 
+textLength="132" 
+class="s3_1"
+>ACTUATORS</text>
+
+<path d="M291.7,34.2c-2.5,0.8,-5.7,2.6,-6.2,7.3" class="g2_1" />
+<path d="M285,45l0,220" class="g3_1" />
+<path d="M285.9,269.5c0.7,2.4,2.5,5.6,7.2,6.2" class="g2_1" />
+<path d="M297,275l173,0" class="g3_1" />
+<path d="M475.3,275.3c2.4,-0.7,5.6,-2.6,6.2,-7.3" class="g2_1" />
+<path d="M481,263L481,44" class="g3_1" />
+<path d="M481.1,40.1c-0.7,-2.5,-2.6,-5.7,-7.3,-6.3" class="g2_1" />
+<path d="M469,33L296,33" class="g3_1" />
+<path d="M279.3,79.6c0,0,-9.2,0,-9.2,9.2l0,223.6c0,0,0,9.2,9.2,9.2l177.8,0c0,0,9.2,0,9.2,-9.2l0,-223.6c0,0,0,-9.2,-9.2,-9.2Z" class="g4_1" />
+<text 
+x="292" 
+y="114" 
+textLength="152" 
+class="s3_1"
+>SENSOR TYPE</text>
+
+<path d="M276.4,80.1c-2.4,0.7,-5.7,2.5,-6.2,7.2" class="g2_1" />
+<path d="M270,91l0,219" class="g3_1" />
+<path d="M270.6,315.3c0.7,2.4,2.6,5.7,7.2,6.2" class="g2_1" />
+<path d="M282,321l173,0" class="g3_1" />
+<path d="M460,321.1c2.4,-0.7,5.6,-2.5,6.2,-7.2" class="g2_1" />
+<path d="M466,309L466,90" class="g3_1" />
+<path d="M465.8,85.9c-0.7,-2.4,-2.6,-5.7,-7.2,-6.2" class="g2_1" />
+<path d="M454,79L280,79" class="g3_1" />
+<path d="M34.8,125.4c0,0,-9.1,0,-9.1,9.2l0,223.7c0,0,0,9.1,9.1,9.1l177.9,0c0,0,9.1,0,9.1,-9.1l0,-223.7c0,0,0,-9.2,-9.1,-9.2Z" class="g5_1" />
+<text 
+x="95" 
+y="162" 
+textLength="56" 
+class="s3_1"
+>TASK</text>
+
+<text 
+x="87" 
+y="193" 
+textLength="73" 
+class="s2_1"
+>speaking</text>
+
+<text 
+x="71" 
+y="223" 
+textLength="103" 
+class="s2_1"
+>manipulating</text>
+
+<text 
+x="88" 
+y="254" 
+textLength="70" 
+class="s2_1"
+>grasping</text>
+
+<text 
+x="88" 
+y="284" 
+textLength="70" 
+class="s2_1"
+>mapping</text>
+
+<text 
+x="84" 
+y="315" 
+textLength="79" 
+class="s2_1"
+>observing</text>
+
+<text 
+x="81" 
+y="345" 
+textLength="83" 
+class="s2_1"
+>navigating</text>
+
+<path d="M32,125.9c-2.5,0.7,-5.7,2.6,-6.3,7.2" class="g2_1" />
+<path d="M25,137l0,219" class="g3_1" />
+<path d="M26.1,361.1c0.8,2.5,2.6,5.7,7.3,6.2" class="g2_1" />
+<path d="M37,367l174,0" class="g3_1" />
+<path d="M215.5,367c2.5,-0.8,5.7,-2.6,6.3,-7.3" class="g2_1" />
+<path d="M221,355l0,-219" class="g3_1" />
+<path d="M221.4,131.7c-0.8,-2.4,-2.6,-5.6,-7.3,-6.2" class="g2_1" />
+<path d="M209,125L36,125" class="g3_1" />
+<text 
+x="200" 
+y="196" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="200" 
+y="226" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="200" 
+y="257" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="200" 
+y="287" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="200" 
+y="318" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="200" 
+y="348" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<path d="M264,125.4c0,0,-9.2,0,-9.2,9.2l0,223.7c0,0,0,9.1,9.2,9.1l177.8,0c0,0,9.2,0,9.2,-9.1l0,-223.7c0,0,0,-9.2,-9.2,-9.2Z" class="g5_1" />
+<text 
+x="283" 
+y="162" 
+textLength="139" 
+class="s3_1"
+>ROBOT TYPE</text>
+
+<text 
+x="313" 
+y="193" 
+textLength="78" 
+class="s2_1"
+>quadrotor</text>
+
+<text 
+x="311" 
+y="223" 
+textLength="82" 
+class="s4_1"
+>fxed-wing</text>
+
+<text 
+x="326" 
+y="254" 
+textLength="52" 
+class="s4_1"
+>walker</text>
+
+<text 
+x="321" 
+y="284" 
+textLength="62" 
+class="s2_1"
+>grasper</text>
+
+<text 
+x="318" 
+y="315" 
+textLength="68" 
+class="s4_1"
+>wheeled</text>
+
+<text 
+x="307" 
+y="345" 
+textLength="91" 
+class="s4_1"
+>underwater</text>
+
+<path d="M261.1,125.9c-2.4,0.7,-5.6,2.6,-6.2,7.2" class="g2_1" />
+<path d="M254,137l0,219" class="g3_1" />
+<path d="M255.3,361.1c0.7,2.5,2.6,5.7,7.2,6.2" class="g2_1" />
+<path d="M267,367l173,0" class="g3_1" />
+<path d="M444.7,367c2.4,-0.8,5.7,-2.6,6.2,-7.3" class="g2_1" />
+<path d="M451,355l0,-219" class="g3_1" />
+<path d="M450.5,131.7c-0.7,-2.4,-2.5,-5.6,-7.2,-6.2" class="g2_1" />
+<path d="M438,125l-173,0" class="g3_1" />
+<text 
+x="429" 
+y="196" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="429" 
+y="226" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="429" 
+y="257" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="429" 
+y="287" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="429" 
+y="318" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="429" 
+y="348" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="269" 
+y="196" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="269" 
+y="226" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="269" 
+y="257" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="269" 
+y="287" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="269" 
+y="318" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="269" 
+y="348" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<path d="M493.2,125.4c0,0,-9.2,0,-9.2,9.2l0,223.7c0,0,0,9.1,9.2,9.1l177.8,0c0,0,9.2,0,9.2,-9.1l0,-223.7c0,0,0,-9.2,-9.2,-9.2Z" class="g5_1" />
+<text 
+x="526" 
+y="160" 
+textLength="111" 
+class="s3_1"
+>PLANNING </text>
+
+<text 
+x="510" 
+y="190" 
+textLength="143" 
+class="s3_1"
+>FRAMEWORK</text>
+
+<text 
+x="556" 
+y="221" 
+textLength="51" 
+class="s2_1"
+>OMPL</text>
+
+<text 
+x="556" 
+y="251" 
+textLength="51" 
+class="s2_1"
+>MRPT</text>
+
+<text 
+x="535" 
+y="282" 
+textLength="93" 
+class="s2_1"
+>OpenRAVE</text>
+
+<text 
+x="554" 
+y="312" 
+textLength="55" 
+class="s2_1"
+>orocos</text>
+
+<path d="M490.3,125.9c-2.4,0.7,-5.7,2.6,-6.2,7.2" class="g2_1" />
+<path d="M483,137l0,219" class="g3_1" />
+<path d="M484.5,361.1c0.7,2.5,2.5,5.7,7.2,6.2" class="g2_1" />
+<path d="M496,367l173,0" class="g3_1" />
+<path d="M673.9,367c2.4,-0.8,5.6,-2.6,6.2,-7.3" class="g2_1" />
+<path d="M680,355l0,-219" class="g3_1" />
+<path d="M679.7,131.7c-0.7,-2.4,-2.6,-5.6,-7.2,-6.2" class="g2_1" />
+<path d="M667,125l-173,0" class="g3_1" />
+<text 
+x="658" 
+y="218" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="658" 
+y="249" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="658" 
+y="280" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="658" 
+y="310" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="498" 
+y="218" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="498" 
+y="249" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="498" 
+y="280" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="498" 
+y="310" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<path d="M722.3,125.4c0,0,-9.1,0,-9.1,9.2l0,223.7c0,0,0,9.1,9.1,9.1l177.9,0c0,0,9.1,0,9.1,-9.1l0,-223.7c0,0,0,-9.2,-9.1,-9.2Z" class="g5_1" />
+<text 
+x="748" 
+y="160" 
+textLength="125" 
+class="s3_1"
+>SIMULATOR</text>
+
+<text 
+x="779" 
+y="190" 
+textLength="64" 
+class="s2_1"
+>Gazebo</text>
+
+<text 
+x="767" 
+y="221" 
+textLength="88" 
+class="s4_1"
+>MOOS-IvP</text>
+
+<text 
+x="744" 
+y="251" 
+textLength="133" 
+class="s4_1"
+>hrpsys simulator</text>
+
+<path d="M719.5,125.9c-2.5,0.7,-5.7,2.6,-6.3,7.2" class="g2_1" />
+<path d="M713,137l0,219" class="g3_1" />
+<path d="M713.6,361.1c0.8,2.5,2.6,5.7,7.3,6.2" class="g2_1" />
+<path d="M725,367l173,0" class="g3_1" />
+<path d="M903,367c2.5,-0.8,5.7,-2.6,6.3,-7.3" class="g2_1" />
+<path d="M909,355l0,-219" class="g3_1" />
+<path d="M908.9,131.7c-0.8,-2.4,-2.6,-5.6,-7.3,-6.2" class="g2_1" />
+<path d="M897,125l-174,0" class="g3_1" />
+<text 
+x="728" 
+y="188" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="728" 
+y="218" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<text 
+x="728" 
+y="249" 
+textLength="6" 
+class="s4_1"
+>•</text>
+
+<path d="M469.7,249.5c0.2,-0.4,0.7,-1,1.6,-1.8c1.7,-1.4,2.8,-2.5,3.4,-3.3c0.5,-0.9,0.7,-1.7,0.7,-2.7c0,-1.6,-0.7,-3.1,-2.1,-4.4c-1.4,-1.2,-3.3,-1.8,-5.7,-1.8c-2.3,0,-4.2,0.6,-5.6,1.8c-1.4,1.3,-2.1,2.8,-2.3,4.6l3.9,0.4c0.3,-1.2,0.8,-2.1,1.5,-2.7c0.7,-0.6,1.6,-0.9,2.6,-0.9c1.2,0,2,0.2,2.7,0.8c0.6,0.6,1,1.3,1,2.1c0,0.6,-0.2,1.1,-0.6,1.6c-0.2,0.3,-1,1,-2.2,2c-1.2,1,-2,1.9,-2.4,2.7c-0.4,0.8,-0.6,1.8,-0.6,3c0,0.1,0,0.5,0,1l3.8,0c0,-1.1,0,-1.9,0.3,-2.4Zm0.1,3.9l-4.2,0l0,4.2l4.2,0l0,-4.2Z" class="g6_1" />
+<text 
+x="458" 
+y="257" 
+textLength="18" 
+class="s5_1"
+>?</text>
+
+<path d="M240.5,249.5c0.2,-0.4,0.8,-1,1.6,-1.8c1.8,-1.4,2.9,-2.5,3.4,-3.3c0.5,-0.9,0.8,-1.7,0.8,-2.7c0,-1.6,-0.7,-3.1,-2.2,-4.4c-1.4,-1.2,-3.3,-1.8,-5.7,-1.8c-2.3,0,-4.1,0.6,-5.5,1.8c-1.4,1.3,-2.2,2.8,-2.3,4.6l3.8,0.4c0.3,-1.2,0.8,-2.1,1.5,-2.7c0.7,-0.6,1.6,-0.9,2.7,-0.9c1.1,0,2,0.2,2.6,0.8c0.7,0.6,1,1.3,1,2.1c0,0.6,-0.2,1.1,-0.6,1.6c-0.2,0.3,-0.9,1,-2.2,2c-1.2,1,-2,1.9,-2.4,2.7c-0.4,0.8,-0.6,1.8,-0.6,3c0,0.1,0,0.5,0,1l3.8,0c0,-1.1,0.1,-1.9,0.3,-2.4Zm0.1,3.9l-4.2,0l0,4.2l4.2,0l0,-4.2Z" class="g6_1" />
+<text 
+x="229" 
+y="257" 
+textLength="18" 
+class="s5_1"
+>?</text>
+
+<path d="M698.8,249.5c0.2,-0.4,0.8,-1,1.7,-1.8c1.7,-1.4,2.8,-2.5,3.3,-3.3c0.5,-0.9,0.8,-1.7,0.8,-2.7c0,-1.6,-0.7,-3.1,-2.1,-4.4c-1.4,-1.2,-3.4,-1.8,-5.8,-1.8c-2.3,0,-4.1,0.6,-5.5,1.8c-1.4,1.3,-2.2,2.8,-2.3,4.6l3.9,0.4c0.2,-1.2,0.7,-2.1,1.4,-2.7c0.8,-0.6,1.6,-0.9,2.7,-0.9c1.1,0,2,0.2,2.6,0.8c0.7,0.6,1,1.3,1,2.1c0,0.6,-0.2,1.1,-0.5,1.6c-0.3,0.3,-1,1,-2.2,2c-1.2,1,-2.1,1.9,-2.5,2.7c-0.4,0.8,-0.6,1.8,-0.6,3c0,0.1,0,0.5,0,1l3.8,0c0,-1.1,0.1,-1.9,0.3,-2.4Zm0.1,3.9l-4.2,0l0,4.2l4.2,0l0,-4.2Z" class="g6_1" />
+<text 
+x="687" 
+y="257" 
+textLength="18" 
+class="s5_1"
+>?</text>
+
+<path d="M34.8,520.6c0,0,-9.1,0,-9.1,9.2l0,47.1c0,0,0,9.1,9.1,9.1l865.4,0c0,0,9.1,0,9.1,-9.1l0,-47.1c0,0,0,-9.2,-9.1,-9.2Z" class="g1_1" />
+<text 
+x="35" 
+y="559" 
+textLength="106" 
+class="s1_1"
+>Container 1:</text>
+
+<text 
+x="158" 
+y="559" 
+textLength="70" 
+class="s2_1"
+>grasping</text>
+
+<text 
+x="282" 
+y="559" 
+textLength="35" 
+class="s2_1"
+>PR2</text>
+
+<text 
+x="405" 
+y="559" 
+textLength="50" 
+class="s2_1"
+>Kinect</text>
+
+<text 
+x="529" 
+y="559" 
+textLength="51" 
+class="s2_1"
+>OMPL</text>
+
+<text 
+x="652" 
+y="544" 
+textLength="80" 
+class="s4_1"
+>two-fnger </text>
+
+<text 
+x="652" 
+y="574" 
+textLength="40" 
+class="s4_1"
+>hand</text>
+
+<text 
+x="776" 
+y="559" 
+textLength="64" 
+class="s2_1"
+>Gazebo</text>
+
+<path d="M32,521.1c-2.5,0.7,-5.7,2.5,-6.3,7.2" class="g2_1" />
+<path d="M25,532l0,43" class="g3_1" />
+<path d="M26.1,579.7c0.8,2.5,2.6,5.7,7.3,6.3" class="g2_1" />
+<path d="M37,586l861,0" class="g3_1" />
+<path d="M903,585.6c2.5,-0.7,5.7,-2.6,6.3,-7.3" class="g2_1" />
+<path d="M909,573l0,-42" class="g3_1" />
+<path d="M908.9,526.9c-0.8,-2.5,-2.6,-5.7,-7.3,-6.2" class="g2_1" />
+<path d="M897,520L36,520" class="g3_1" />
+<path d="M34.8,590.6c0,0,-9.1,0,-9.1,9.2l0,48c0,0,0,9.2,9.1,9.2l865.4,0c0,0,9.1,0,9.1,-9.2l0,-48c0,0,0,-9.2,-9.1,-9.2Z" class="g1_1" />
+<text 
+x="35" 
+y="630" 
+textLength="106" 
+class="s1_1"
+>Container 2:</text>
+
+<text 
+x="158" 
+y="630" 
+textLength="79" 
+class="s2_1"
+>observing</text>
+
+<text 
+x="282" 
+y="630" 
+textLength="78" 
+class="s2_1"
+>quadrotor</text>
+
+<text 
+x="405" 
+y="615" 
+textLength="50" 
+class="s2_1"
+>stereo </text>
+
+<text 
+x="405" 
+y="645" 
+textLength="70" 
+class="s2_1"
+>cameras</text>
+
+<text 
+x="529" 
+y="630" 
+textLength="69" 
+class="s2_1"
+>autopilot</text>
+
+<text 
+x="652" 
+y="630" 
+textLength="56" 
+class="s4_1"
+>throttle</text>
+
+<text 
+x="776" 
+y="630" 
+textLength="64" 
+class="s2_1"
+>Gazebo</text>
+
+<path d="M32,591.1c-2.5,0.7,-5.7,2.6,-6.3,7.2" class="g2_1" />
+<path d="M25,602l0,44" class="g2_1" />
+<path d="M26.1,650.7c0.8,2.4,2.6,5.6,7.3,6.2" class="g2_1" />
+<path d="M37,656l861,0" class="g3_1" />
+<path d="M903,656.5c2.5,-0.7,5.7,-2.6,6.3,-7.2" class="g2_1" />
+<path d="M909,644l0,-43" class="g2_1" />
+<path d="M908.9,596.9c-0.8,-2.4,-2.6,-5.6,-7.3,-6.2" class="g2_1" />
+<path d="M897,590L36,590" class="g3_1" />
+<text 
+x="157" 
+y="435" 
+textLength="40" 
+class="s1_1"
+>Task</text>
+
+<text 
+x="281" 
+y="435" 
+textLength="52" 
+class="s1_1"
+>Robot</text>
+
+<text 
+x="404" 
+y="435" 
+textLength="72" 
+class="s1_1"
+>Sensors</text>
+
+<text 
+x="528" 
+y="435" 
+textLength="108" 
+class="s1_1"
+>Frameworks</text>
+
+<text 
+x="652" 
+y="435" 
+textLength="85" 
+class="s1_1"
+>Actuators</text>
+
+<text 
+x="775" 
+y="435" 
+textLength="84" 
+class="s1_1"
+>Simulator</text>
+
+<path d="M55,396l825,0" class="g7_1" />
+
+<path d="M0,1210
+L0,0
+L935,0
+L935,1210 z "
+fill="none"
+stroke-width="1.0"
+stroke-linecap="butt"
+stroke-linejoin="miter"
+stroke="#000000" />
+
+<!-- Any embedded fonts defined here -->
+<style type="text/css" ><![CDATA[
+
+@font-face {
+	font-family: QTONUP-ArialMT_21;
+	src :url("1/fonts/QTONUP-ArialMT_2.woff") format("woff");
+}
+
+@font-face {
+	font-family: QTONUP-ArialMT1;
+	src :url("1/fonts/QTONUP-ArialMT.woff") format("woff");
+}
+
+@font-face {
+	font-family: QTONUP-Arial-BoldMT1;
+	src :url("1/fonts/QTONUP-Arial-BoldMT.woff") format("woff");
+}
+
+]]></style>
+
+<title>containers Page1</title>
+</svg>
